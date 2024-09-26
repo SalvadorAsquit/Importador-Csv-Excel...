@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import boostrap -->
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap-icons.css">
+    <link rel="stylesheet" href="./lib/bootstrap/bootstrap.min.css">
+    <script src="./lib/bootstrap/bootstrap.min.js"></script>
+    <script src="./lib/bootstrap/popper.min.js"></script>
+    <!-- import jquery -->
+    <script src="./lib/jquery/jquery-3.5.1.min.js"></script>
+    <!-- import js -->
+    <script src="./js/index.js"></script>
+    <title>Importador</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Archivo
+                    </div>
+                    <div class="card-body">
+                        <label>Archivo</label>
+                        <input class="form-control form-control-sm" name="import-file" id="import-file" type="file" accept=".xlsx">
+                        <button type="button" class="btn btn-primary btn-sm form-control" id="import-upload" name="import-upload">Importar</button>
+                    </div>
+                    <div class="card-footer">
+                        <label>Solo valido Xlsx, Csv , Txt</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Delimitador
+                    </div>
+                    <div class="card-body">
+                        <select name="delimiter" id="delimiter">
+                            <option value=";"> ; </option>
+                            <option value=","> , </option>
+                            <option value="\t"> tabulación </option>
+                        </select>
+                    </div>
+                    <div class="card-footer">
+                        Si es Csv o Txt elegir el Delimitador
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-center h-100">
+                    <div class="card-header">
+                        RESULTADOS DE LA IMPORTACIÓN
+                    </div>
+                    <div class="card-body" id="resultados">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-3">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Listado de Errores
+                    </div>
+                    <div class="card-body" id="errores">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
